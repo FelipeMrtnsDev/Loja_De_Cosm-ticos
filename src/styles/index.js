@@ -7,6 +7,9 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
+
+        @import "~slick-carousel/slick/slick.css";
+        @import "~slick-carousel/slick/slick-theme.css";
     }
 `
 

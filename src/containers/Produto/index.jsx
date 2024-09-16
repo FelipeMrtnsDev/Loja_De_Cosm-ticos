@@ -17,7 +17,7 @@ const Produto = ({ titulo, preco, descricao, image, alt, id}) => {
         }
         dispatch(adicionarProdutos(Produto))
 
-        console.log(Produto)
+        // console.log(Produto)
     }
 
     return(

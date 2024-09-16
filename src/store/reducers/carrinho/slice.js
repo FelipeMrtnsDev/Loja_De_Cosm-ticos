@@ -41,7 +41,14 @@ const carrinhoSlice = createSlice({
     },
     RemoverProduto: (state, action) => {
       state.produtos = state.produtos.filter((produto) => produto.id !== action.payload)
-  }
+    },
+    updateProductQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const produto = state.produtos.find(produto => produto.id === id)
+      if (produto) {
+        produto.quantity = quantity;
+      }
+    }
 },
 });
 

@@ -1,8 +1,12 @@
+import Carrosel from "../../components/Carrosel";
 import ListaDeProdutos from "../../containers/ListaDeProdutos";
 
 function Home() {
     return(
-        <ListaDeProdutos />
+        <>
+            <Carrosel />
+            <ListaDeProdutos />
+        </>
     )
 }
 

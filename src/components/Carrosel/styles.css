@@ -1,79 +1,71 @@
-/* Contêiner principal do carrossel */
 .slider {
     margin: 0 auto;
     width: 100%;
     height: auto;
     padding: 0 !important;
     overflow: hidden;
-    position: relative; /* Permite posicionar setas e controles de navegação */
+    position: relative;
     margin-bottom: 64px;
+    margin-top: 64px;
+    z-index: 1;
 }
 
-/* Contêiner que exibe as imagens do carrossel */
 .slider-content {
     display: flex;
-    transition: transform 1s ease-in-out; /* Suaviza a transição entre slides */
-    cursor: pointer; /* Indica que o carrossel pode ser arrastado */
-    width: 100%; /* Atualiza a largura para 100% */
-    height: 100%; /* Garante que o carrossel ocupe toda a altura do contêiner */
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
-/* Cada slide do carrossel */
 .slide-box {
-    flex: 0 0 100%; /* Cada slide ocupa 100% da largura do contêiner */
-    height: 100%; /* Garante que o slide ocupe toda a altura do contêiner */
+    flex: 0 0 100%;
+    height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centraliza o conteúdo vertical e horizontalmente */
-    overflow: hidden; /* Oculta qualquer parte das imagens que saem do slide */
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Imagens dentro dos slides */
 .slide-box img {
     width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* Ajusta a imagem para cobrir o slide sem distorcer */
+    height: auto;
+    object-fit: cover;
 }
 
-/* Oculta imagens móveis por padrão */
 .img-mobile {
     display: none;
 }
 
-/* Controles de navegação manual e automática */
 .nav-manual,
 .nav-auto {
     position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
-    bottom: 10px; /* Posiciona na parte inferior */
-    z-index: 1; /* Garante que os botões fiquem sobre os slides */
+    bottom: 10px;
+    z-index: 1;
 }
 
-/* Estilo dos botões de navegação manual e automática */
 .nav-manual .manual-btn,
 .nav-auto div {
-    border: 1px solid #ff0054; /* Borda vermelha */
+    border: 1px solid #ff0054;
     padding: 10px;
-    border-radius: 50%; /* Botões redondos */
+    border-radius: 50%;
     cursor: pointer;
-    transition: 0.2s; /* Animação suave ao passar o mouse */
+    transition: 0.2s;
 }
 
-/* Margem entre botões, exceto o último */
 .nav-manual .manual-btn:not(:last-child),
 .nav-auto div:not(:last-child) {
     margin-right: 10px;
 }
 
-/* Estilo ao passar o mouse sobre os botões de navegação manual */
 .nav-manual .manual-btn:hover {
-    background-color: #ff0054; /* Muda a cor de fundo ao passar o mouse */
+    background-color: #ff0054;
 }
 
-/* Estilo das setas */
 .arrow {
     position: absolute;
     top: 50%;
@@ -83,7 +75,7 @@
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 2; /* Garante que as setas fiquem acima dos slides e controles */
+    z-index: 2;
 }
 
 .arrow.prev {
@@ -94,52 +86,49 @@
     right: 10px;
 }
 
-/* Indicadores de navegação */
 .indicators {
     position: absolute;
-    bottom: 30px; /* Ajusta a posição dos indicadores acima dos controles de navegação */
+    bottom: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 1; /* Garante que os indicadores fiquem sobre os slides */
+    z-index: 1;
 }
 
 .indicator {
-    border: 1px solid #ff0054; /* Cor da borda */
-    border-radius: 50%; /* Indicador redondo */
-    background-color: white; /* Cor de fundo */
-    width: 10px;
-    height: 10px;
+    border: 1px solid #ff0054;
+    border-radius: 50%;
+    background-color: white;
+    width: 16px;
+    height: 16px;
     margin: 0 5px;
-    cursor: pointer; /* Cursor para indicar que é clicável */
-    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .indicator.active {
-    background-color: #ff0054; /* Cor de fundo para o indicador ativo */
+    background-color: #ff0054;
 }
 
-/* Mantém as setas visíveis em todas as telas */
 @media screen and (max-width: 900px) {
     .img-desktop {
-        display: none; /* Oculta as imagens desktop em telas menores */
+        display: none;
     }
 
     .img-mobile {
-        display: block; /* Exibe as imagens móveis em telas menores */
+        display: block;
     }
 
     .nav-auto,
     .nav-manual {
-        bottom: 60px; /* Ajusta a posição para telas menores */
+        bottom: 60px;
     }
 
-    /* As setas permanecem visíveis em telas pequenas */
     .arrow {
         display: block;
     }
 
     .indicators {
-        bottom: 20px; /* Ajusta a posição dos indicadores para telas menores */
+        bottom: 20px;
     }
 }

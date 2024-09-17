@@ -1,14 +1,19 @@
 import Produto from "../Produto";
 import { produtos } from "../../models/produtos";
-import { ContainerProdutos } from "./styles";
+import { ContainerProdutos, H1Container } from "./styles";
 
 function ListaDeProdutos() {
     return(
-        <ContainerProdutos>
-            {produtos.map((produto) => (
-                <Produto alt={produto.titulo} descricao={produto.descricao} image={produto.imagemUrl} preco={produto.preco} titulo={produto.titulo} id={produto.id}/>
-            ))}
-        </ContainerProdutos>
+        <>
+            <H1Container>
+                <h1>Produtos</h1>
+            </H1Container>
+            <ContainerProdutos>
+                {produtos.map((produto) => (
+                    <Produto alt={produto.titulo} descricao={produto.descricao} image={produto.imagemUrl} preco={produto.preco} titulo={produto.titulo} id={produto.id}/>
+                ))}
+            </ContainerProdutos>
+        </>
     )
 }
 

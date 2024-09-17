@@ -1,12 +1,15 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Card = styled.div`
+export const Card = styled(Link)`
     width: 250px;
-    height: 400px;
-    border: 1px solid black;
+    height: 350px;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0px 0px 5px grey;
+    cursor: pointer;
+    text-decoration: none;
 `
 
 export const Image = styled.div`
@@ -50,11 +53,47 @@ export const BotaoAdicionar = styled.button`
     margin-top: 8px;
     padding: 6px;
     border-radius: 8px;
-    border: 1px solid green;
+    border: none;
     background-color: lime;
     cursor: pointer;
 
     &:hover {
         background-color: limegreen;
+    }
+`
+
+export const PrecoProduto = styled.div`
+    width: 100%;
+    display: flex;
+    padding-left: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .preco {
+        color: #fa2e59;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    span {
+        color: #fa2e59;
+    }
+
+    svg {
+        font-size: 22px;
+    }
+
+`
+
+export const Avaliacao = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+
+    .valor-avaliacao {
+        color: black;
     }
 `

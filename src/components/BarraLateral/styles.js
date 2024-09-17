@@ -5,16 +5,16 @@ export const SideBar = styled.aside`
     right: 0;
     width: 400px;
     height: 100vh;
-    background-color: white;
+    background-color: #fa2e59;
     transition: all ease 1s;
     display: ${props => (props.open ? 'flex' : 'none')};
     flex-direction: column;
     justify-content: start;
     color: white;
-    border-left: 2px solid black;
+    border-left: 4px solid black;
+    z-index: 3;
 
     .close {
-        color: black;
         font-size: 50px;
         cursor: pointer;
     }
@@ -35,13 +35,13 @@ export const Itens = styled.div`
     cursor: pointer;
     
     p {
-        color: black;
+        color: white;
         font-size: 30px;
         align-items: center;
     }
     
     svg {
-        color: black;
+        color: white;
         font-size: 50px;
         margin-right: 30px;
     }

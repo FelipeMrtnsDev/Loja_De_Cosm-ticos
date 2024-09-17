@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const NavBar = styled.nav`
-    background-color: grey;
+    background-color: #fa2e59;
     height: 90px;
     width: 100%;
     display: flex ;
-    margin-bottom: 64px;
 
 
     a {

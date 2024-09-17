@@ -1,0 +1,83 @@
+/* Container do carrossel */
+.carrossel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px; /* Ajuste conforme necessário para o tamanho desejado do carrossel */
+}
+
+/* Slides do carrossel */
+.carrossel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+/* Cada slide individual */
+.carrossel-slide {
+    flex: 0 0 100%; /* Garante que cada slide ocupe 100% do contêiner */
+    height: 100%; /* Para garantir que os slides preencham o contêiner */
+    display: flex;
+    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+}
+
+/* Imagem dentro do slide */
+.carrossel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta a imagem para caber no slide sem cortar */
+}
+
+/* Botão de navegação anterior */
+.carrossel-prev,
+.carrossel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7); /* Fundo branco semitransparente */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    font-size: 24px; /* Tamanho maior para maior visibilidade */
+}
+
+/* Botão anterior */
+.carrossel-prev {
+    left: 10px;
+}
+
+/* Botão seguinte */
+.carrossel-next {
+    right: 10px;
+}
+
+/* Indicadores do carrossel */
+.carrossel-indicadores {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+/* Indicador individual */
+.carrossel-indicador {
+    background: black; /* Cor preta para maior visibilidade */
+    border-radius: 50%;
+    width: 12px; /* Aumenta o tamanho do indicador */
+    height: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Indicador ativo */
+.carrossel-indicador.ativo {
+    background: white; /* Cor branca para o indicador ativo */
+}
+
+.container-carrosel {
+    max-width: 1024px;
+    margin: 0 auto;
+}

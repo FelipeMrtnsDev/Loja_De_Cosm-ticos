@@ -8,7 +8,7 @@ function BarraLateral({ open, toggleSidebar }) {
     return (
         <SideBar open={open}>
             <Close>
-                <IoClose className="close" onClick={toggleSidebar} color="black" />
+                <IoClose className="close" onClick={toggleSidebar} color="white" />
             </Close>
             <Itens as={Link} to='/'>
                 <GoHome /> 

@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
-import { incrementarProduto, DecrementarProduto, RemoverProduto } from '../../store/reducers/carrinho/slice';
+import { incrementarProduto, decrementarProduto, removerProduto } from '../../store/reducers/carrinho/slice';
 
 function ItemCarrinho({ produto }) {
 
@@ -14,11 +14,11 @@ function ItemCarrinho({ produto }) {
     }
 
     const handleDecrementarClick = () => {
-        dispatch(DecrementarProduto(produto.id))
+        dispatch(decrementarProduto(produto.id))
     }
 
     const handleRemoverClick = () => {
-        dispatch(RemoverProduto(produto.id))
+        dispatch(removerProduto(produto.id))
     }
 
     return(
@@ -39,7 +39,6 @@ function ItemCarrinho({ produto }) {
                     </Infos>
                 </ImageInfosContainer>
                 <PrecoTotal>
-                    
                     <p>{produto.preco}</p>
                 </PrecoTotal>
                 <Cancelar>

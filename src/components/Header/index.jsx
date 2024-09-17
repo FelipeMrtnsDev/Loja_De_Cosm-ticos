@@ -12,7 +12,9 @@ function Header() {
     return (
         <NavBar>
             <Itens >
-                <Link to='/'><h1>Nome da empresa</h1></Link>
+                <Link to='/'>
+                    <h1>AS CLINIC</h1>
+                </Link>
                 <FiMenu onClick={toggleSidebar} size={30} color="black" />
             </Itens>
             <BarraLateral open={isOpen} toggleSidebar={toggleSidebar} />

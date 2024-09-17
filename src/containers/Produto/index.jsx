@@ -1,43 +1,31 @@
-import { useDispatch } from 'react-redux'
-import { Card, Descricao, Image, Titulo, BotaoAdicionar } from './styles'
-import { adicionarProdutos } from '../../store/reducers/carrinho/slice'
+import { Card, Descricao, Image, Titulo, PrecoProduto, Avaliacao } from './styles'
+import { FaStar } from "react-icons/fa";
 
 const Produto = ({ titulo, preco, descricao, image, alt, id}) => {
-
-    const dispatch = useDispatch()
-
-    const handleProdutoClick = () => {
-        const Produto = {
-            id,
-            titulo,
-            preco,
-            descricao,
-            image,
-            alt
-        }
-        dispatch(adicionarProdutos(Produto))
-
-        // console.log(Produto)
-    }
-
     return(
-        <Card key={id}>
+        <Card key={id} to={`/produto/${id}`}>
             <Image>
                 <img src={image} alt={alt} />
             </Image>
-            <hr />
             <Titulo>
                 <h2>{titulo}</h2>
                 <Descricao>
                     <p>{descricao}</p>
                 </Descricao>
-                <p>R${preco}</p>
-                <BotaoAdicionar onClick={handleProdutoClick}>Adicionar</BotaoAdicionar>
+                <PrecoProduto>
+                    <p className='preco'>
+                        <span>R$</span>
+                        {preco}
+                    </p>
+                    <Avaliacao>
+                        <FaStar color='yellow' />
+                        <p className='valor-avaliacao'>4.5</p>
+                    </Avaliacao>
+                </PrecoProduto>
+                {/* <BotaoAdicionar>Adicionar</BotaoAdicionar> */}
             </Titulo>
         </Card>
     )
 }
 
 export default Produto
-
-//imagem, alt, titulo, descricao, preco

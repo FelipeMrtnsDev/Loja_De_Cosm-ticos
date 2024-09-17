@@ -45,7 +45,7 @@ function Carrosel() {
     const handleMouseMove = (e) => {
         if (!isDragging.current) return;
         const x = e.pageX - sliderRef.current.offsetLeft;
-        const walk = (x - startX.current) * 2; // Ajusta a velocidade do arrasto
+        const walk = (x - startX.current) * 2;
         sliderRef.current.scrollLeft = scrollLeft.current - walk;
     };
 
@@ -53,7 +53,6 @@ function Carrosel() {
         if (!isDragging.current) return;
         isDragging.current = false;
 
-        // Calcula o índice do slide mais próximo
         const slideWidth = sliderRef.current.clientWidth;
         const newIndex = Math.round(sliderRef.current.scrollLeft / slideWidth);
         setCurrentIndex(newIndex);
@@ -72,7 +71,7 @@ function Carrosel() {
     const handleTouchMove = (e) => {
         if (!isTouching.current) return;
         const x = e.touches[0].pageX - sliderRef.current.offsetLeft;
-        const walk = (x - startTouchX.current) * 2; // Ajusta a velocidade do arrasto
+        const walk = (x - startTouchX.current) * 2;
         sliderRef.current.scrollLeft = scrollLeft.current - walk;
     };
 
@@ -80,7 +79,6 @@ function Carrosel() {
         if (!isTouching.current) return;
         isTouching.current = false;
 
-        // Calcula o índice do slide mais próximo
         const slideWidth = sliderRef.current.clientWidth;
         const newIndex = Math.round(sliderRef.current.scrollLeft / slideWidth);
         setCurrentIndex(newIndex);

@@ -11,12 +11,14 @@ function DetalhesProduto() {
     const dispatch = useDispatch();
 
     const handleProdutoClick = () => {
-        dispatch(adicionarProdutos(produtos));
+        dispatch(adicionarProdutos(produtoFind));
     };
 
     if (!produtoFind) {
         return <p>Produto não encontrado</p>;
     }
+
+    console.log(produtoFind)
 
     return (
         <MainContainer>

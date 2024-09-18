@@ -7,8 +7,8 @@ export const selectProdutoPrecoTotal = createSelector(
     estadocarrinho => {
         return estadocarrinho.produtos.reduce((acc, produto) => {
             const preco = Number(produto.preco) || 0;
-            const quantity = Number(produto.quantity) || 1;
-            return acc + preco * quantity;
+            const quantidade = Number(produto.quantity) || produto.quantidade;
+            return acc + preco * quantidade;
         }, 0);
     }
 );

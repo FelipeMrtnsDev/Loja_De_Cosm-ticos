@@ -5,6 +5,7 @@ export const PrecoTotalCard = styled.div`
     border: 1px solid black;
     width: 100%;
     height: 500px;
+    width: 300px;
     margin-top: 30px;
     display: flex;
     flex-direction: column;

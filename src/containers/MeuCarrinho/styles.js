@@ -7,5 +7,7 @@ export const MyCart = styled.div`
 export const CartContainer = styled.div`
     display: flex;
     flex-direction: column;
+    width: 100%;
 `
+
 

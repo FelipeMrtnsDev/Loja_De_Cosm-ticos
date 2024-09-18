@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import ItemCarrinho from "../ItemCarrinho"
-import { CartContainer, MyCart } from "./styles"
+import { CartContainer, MainContainer, MyCart } from "./styles"
 import PrecoTotal from "../PrecoTotal"
 
 function MeuCarrinho() {

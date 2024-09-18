@@ -26,7 +26,7 @@ function ItemCarrinho({ produto }) {
             <ProdutoContainer>
                 <ImageInfosContainer>
                     <Image>
-                        <img src={produto.image} alt={produto.titulo} />
+                        <img src={produto.imagemUrl} alt={produto.titulo} />
                     </Image>
                     <Infos>
                         <h3>{produto.titulo}</h3>

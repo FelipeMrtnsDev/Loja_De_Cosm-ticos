@@ -1,10 +1,12 @@
 import MeuCarrinho from "../../containers/MeuCarrinho"
-import { CarrinhoContainer } from "./styles"
+import { CarrinhoContainer, MainCarrinhoContainer } from "./styles"
 
 function Carrinho() {
     return(
         <CarrinhoContainer>
-            <MeuCarrinho />
+            <MainCarrinhoContainer>
+                <MeuCarrinho />
+            </MainCarrinhoContainer>
         </CarrinhoContainer>
     )
 }
